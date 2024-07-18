@@ -1,0 +1,86 @@
+/* Estilos para o body e header */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("Background.svg");
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border-bottom: solid 1px;
+    border-color: #d8d8d8;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: auto; /* Ajusta a altura automaticamente */
+    max-width: 100%; /* Imagem não ultrapassa o tamanho do container */
+}
+
+.title {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.5rem; /* Tamanho de fonte responsivo */
+    margin-right: 1.5rem; /* Margem responsiva */
+}
+
+/* Estilos para o main e description */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px; /* Espaçamento responsivo */
+}
+
+.description p {
+    max-width: 100%;
+    font-size: 1rem; /* Tamanho de fonte responsivo */
+    text-align: justify;
+    color: #696969;
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap; /* Envolve os ícones quando há pouco espaço */
+    justify-content: center;
+    gap: 1rem; /* Espaçamento entre os ícones responsivo */
+    margin-top: 1rem; /* Margem responsiva */
+}
+
+/* Estilos para os botões e ícones */
+.button_1, .button_2, .button_3, .button_4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 1rem; /* Tamanho de fonte responsivo */
+    color: rgb(68, 68, 68);
+    background-color: rgba(255, 255, 255, 0.411);
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.button_1:hover, .button_2:hover, .button_3:hover, .button_4:hover {
+    background-color: rgba(10, 119, 209, 0.644);
+    color: rgb(255, 255, 255);
+}
+
+.icon_1, .icon_2, .icon_3, .icon_4 {
+    width: 60px;
+    height: auto; /* Ajusta a altura automaticamente */
+}

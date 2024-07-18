@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("Background.svg");
+    margin: 0px;
+  }
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #ffffff;
+    color: #000000;
+    border-bottom: solid 1px;
+    border-color: #d8d8d8;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header img {
+    height:11%; /* Ajusta a altura automaticamente */
+    width: 11%; /* Imagem não ultrapassa o tamanho do container */
+}
+header img {
+    height:11%; /* Ajusta a altura automaticamente */
+    width: 11%; /* Imagem não ultrapassa o tamanho do container */
+}
+
+
+/*  */
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    justify-content: center;
+}
+
+.title_description {
+    font-size: 26px;
+    color: #5f5f5f;
+}
+
+.description {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    text-align: justify;
+    padding-bottom: 50px;
+}
+
+.description p {
+    width: 100%;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: justify;
+    color: #696969;
+}
+
+.button_1, .button_2, .button_3, .button_4 {
+    display: flex;
+    width: 150px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: rgb(68, 68, 68);
+    background-color: rgba(255, 255, 255, 0.411);
+    border:none;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+
+}
+
+.button_1:hover, .button_2:hover, .button_3:hover, .button_4:hover {
+    background-color: rgba(10, 119, 209, 0.644);
+    color: rgb(255, 255, 255);
+}
+
+.icons {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center; 
+    gap: 35px;
+    padding: 10px;
+}
+
+.icon_1, .icon_2, .icon_3, .icon_4 {
+    width: 60px;
+    justify-content: center;
+    padding-top: 20px;
+
+}
+
+.aa, .bb, .cc, .dd {  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+

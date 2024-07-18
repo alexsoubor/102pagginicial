@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Icon_rh.svg" type="image/x-icon">
+    <title>Formulário 102 - Início</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="script.js">
+       // Função para verificar se é o primeiro acesso
+function isFirstVisit() {
+    // Verifica se o cookie 'visited' já existe
+    return !document.cookie.includes('visited=true');
+}
+
+// Função para configurar o cookie de visita
+function setVisitedCookie() {
+    // Define o cookie 'visited' para expirar em 1 ano
+    var date = new Date();
+    date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
+    var expires = "; expires=" + date.toUTCString();
+    document.cookie = "visited=true; expires=" + expires + "; path=/";
+}
+
+// Função para redirecionar para a página de login
+function redirectToLogin() {
+    window.location.replace("https://login102digital.netlify.app/");
+}
+
+// Verifica se é o primeiro acesso e redireciona se necessário
+if (window.location.href === "https://menuform102.netlify.app/") {
+    if (isFirstVisit()) {
+        // Define o cookie de visita apenas no primeiro acesso
+        setVisitedCookie();
+    } else {
+        // Configura redirecionamento após 10 minutos de inatividade se não for o primeiro acesso
+        var inactivityTimeout = 1 * 60 * 1000; // 10 minutos em milissegundos
+        var timeoutTimer;
+
+        function resetTimer() {
+            clearTimeout(timeoutTimer);
+            timeoutTimer = setTimeout(redirectToLogin, inactivityTimeout);
+        }
+
+        // Reseta o temporizador em resposta a eventos de interação do usuário
+        document.addEventListener("mousemove", resetTimer);
+        document.addEventListener("keydown", resetTimer);
+        document.addEventListener("scroll", resetTimer);
+
+        // Inicializa o temporizador
+        resetTimer();
+    }
+}
+
+
+
+    </script> 
+</head>
+
+<body>
+    <!-- Construção do header -->
+    <header>
+        
+        <img src="Logo Dass.svg" alt="Logo">
+        <p class="title">Projeto : Plataforma <b>Formulário 102 digital</b></p>
+
+    </header>
+
+    <main>  
+
+        <div class="description">
+
+            <p> 
+                <b class="title_description">Bem vindo!</b>
+                <br>
+                <br>
+                Este é o sistema de <i>Avaliação de Desempenho de Colaboradores</i>. Aqui você pode realizar avaliações, 
+                fornecer feedbacks e acompanhar o desenvolvimento de sua equipe. Para isso utilizaremos o Formulário 
+                102 digital, ele continua da mesma forma e com os mesmos itens abordados na avaliação.
+                <br>
+                <br>
+                O funcionamento ocorre da seguinte forma: Formulário de avaliação, onde são avaliados os itens em AP, APR e NA e 
+                Formulário de Feedback que deve ser realizado obrigatóriamente a cada semestre, mas também caso necessário
+                poder ser feito mensalmente.                       
+        
+            </p>
+        </div>
+            
+        <div class="icons">
+            <div class="aa">
+                <a href="https://avaliacao102.netlify.app/" class="button_1"><i class="fa fa-check-circle"></i>Realizar<br> Avaliação</a>
+                <img src="icone 1.png" class="icon_1" alt="Ava">
+            </div>
+
+            <div class="bb">
+                <a href="https://avalfeed.netlify.app/" class="button_2"><i class="fa fa-comments"></i>Realizar Avaliação<br> e Feedback</a>
+                <img src="icone 2.png" class="icon_2" alt="Ava_feed">
+            </div>
+
+            <div class="cc">
+                <a href="https://avalfeed.netlify.app/" class="button_3"><i class="fa fa-comment"></i>Realizar<br> Feedback</a>
+                <img src="icone 3.png" class="icon_3" alt="Feed">
+            </div>
+
+            <div class="dd">
+                <a href="https://avalfeed.netlify.app/" class="button_4"><i class="fa fa-chart-bar"></i>Analisar<br> Dados</a>
+                <img src="icone 4.png" class="icon_4" alt="Dados"> 
+            </div>
+        </div>
+   
+     </main>
+  
+
+</body>
+</html>
